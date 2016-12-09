@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <title>Champler! 3x3x3 スクランブルジェネレータ &hearts; {{ param.sitename }}</title>
+    <title>Champly! 3x3x3 スクランブルジェネレータ for BLDer m&hearts; SiteName</title>
     <!-- Modernizr -->
     <script src="./js/libs/modernizr-2.6.2.min.js"></script>
     <!-- jQuery-->
@@ -21,35 +21,34 @@
     <link type="text/css" rel="stylesheet" href="./css/groundwork-ui.css">
     <link type="text/css" rel="stylesheet" href="./css/groundwork-anim.css">
     <link type="text/css" rel="stylesheet" href="./css/groundwork-ie.css"><![endif]-->
-    <link type="text/css" rel="stylesheet" href="./champler.css">
+    <link type="text/css" rel="stylesheet" href="./champly.css">
     <meta property="og:locale" content="ja_JP">
-    <meta property="og:title" content="Champler! 3x3x3 スクランブルジェネレータ">
-    <meta property="og:site_name" content="{{ param.sitename }}">
-    <meta property="og:description" content="ルービックキューブ (3x3x3) のスクランブルを生成します。「コーナーのみスクランブル」や「エッジのみスクランブル」等のオプションを指定できます。">
+    <meta property="og:title" content="Champly! 3x3x3 スクランブルジェネレータ for BLDer">
+    <meta property="og:site_name" content="SiteName">
+    <meta property="og:description" content="ルービックキューブ (3x3x3) 目隠し練習用のスクランブルを生成します。">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="{{ param.baseurl }}/champler">
-    <meta property="og:image" content="{{ param.baseurl }}/champler.png">
+    <meta property="og:url" content="http://www.example.com/champly/champly">
+    <meta property="og:image" content="http://www.example.com/champly/champly.png">
   </head>
   <body>
 
     <header class="container pad-top bounceInUp animated">
       <div class="padded">
-        <h1 class="zero">Champler!</h1>
-        <h2>&mdash; 3x3x3 スクランブルジェネレータ &mdash;</h2>
+        <h1 class="zero">Champly!</h1>
+        <h2>&mdash; 3x3x3 スクランブルジェネレータ for BLDer &mdash;</h2>
         <p class="pad-top">
-          ルービックキューブ (3x3x3) のスクランブルを生成します。
-          「コーナーのみスクランブル」や「エッジのみスクランブル」等のオプションを指定できます。
+          ルービックキューブ (3x3x3) 目隠し練習用のスクランブルを生成します。
         </p>
       </div>
       <div class="pad-left pad-right">
-        {{ param.breadcrumb }}
+        <a href="#">Top</a> <i class="icon-angle-right"></i> <a href="./champly">Champly!</a>
       </div>
     </header>
 
     <hr>
 
     <div class="container pad-top bounceInRight animated">
-      <form id="inputs-form" action="http://cube.terabo.net/apis/chample.jsonp" method="GET">
+      <form id="inputs-form" action="http://cube.terabo.net/apis/chample-for-champly.jsonp" method="GET">
         <fieldset>
           <legend>Inputs</legend>
           <div class="row">
@@ -73,7 +72,7 @@
           <p id="inputs-error-text" class="error message"></p>
         </div>
         <div class="double-padded">
-          <button id="button-chample" type="submit" class="large block asphalt">Chample!</buttom>
+          <button id="button-champly" type="submit" class="large block asphalt">Champly!</buttom>
         </div>
       </form>
     </div><!-- /.container -->
@@ -111,7 +110,7 @@
       <div class="box square charcoal">
         <div class="container padded">
           <p>
-            <a href="https://github.com/kotarot/champler" target="_blank"><b>Champler! project</b></a>:
+            <a href="https://github.com/kotarot/champly" target="_blank"><b>Champly! project</b></a>:
             Feel free to star it, fork it, send a bug report, or send a pull request!
           </p>
         </div>
@@ -120,12 +119,12 @@
 
     <!-- javascript-->
     <script type="text/javascript" src="./js/groundwork.all.js"></script>
-    <script type="text/javascript" src="./champler.js"></script>
+    <script type="text/javascript" src="./champly.js"></script>
 
     <!-- google analytics-->
     <script type="text/javascript">
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', '{{ param.ga }}']);
+      _gaq.push(['_setAccount', 'UA-XXXXXXXX-X']);
       _gaq.push(['_trackPageview']);
       (function() {
       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;

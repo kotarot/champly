@@ -1,5 +1,5 @@
 /**
- * champler.js
+ * champly.js
  */
 
 $('#input-number').change(function() {
@@ -17,11 +17,11 @@ $('#input-number').change(function() {
     if (isError) {
         fadeInContainerNoWait('#inputs-error');
         $('#input-number').addClass('invalid');
-        $('#button-chample').attr('disabled', true);
+        $('#button-champly').attr('disabled', true);
     } else {
         fadeOutContainer('#inputs-error');
         $('#input-number').removeClass('invalid');
-        $('#button-chample').attr('disabled', false);
+        $('#button-champly').attr('disabled', false);
     }
 });
 
@@ -40,14 +40,14 @@ $(document).ready(function() {
             timeout: 30000,
 
             beforeSend: function(xhr, settings) {
-                $('#button-chample').attr('disabled', true);
+                $('#button-champly').attr('disabled', true);
                 fadeOutContainer('#results');
                 fadeOutContainer('#results-error');
                 fadeInContainer('#results-loading');
                 $('#results-error').hide();
             },
             complete: function(xhr, textStatus) {
-                $('#button-chample').attr('disabled', false);
+                $('#button-champly').attr('disabled', false);
                 fadeOutContainer('#results-loading');
             },
 

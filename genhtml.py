@@ -4,16 +4,16 @@
 from jinja2 import Environment, FileSystemLoader
 
 env = Environment(loader=FileSystemLoader('.', encoding='utf-8'))
-tpl = env.get_template('champler.tpl')
+tpl = env.get_template('champly.tpl')
 param = {}
 
 #### HTMLを生成するための設定項目 ####
 # サイト名
 param['sitename'] = 'ExampleNet'
 # ベースURL
-param['baseurl'] = 'http://www.example.com/champler'
+param['baseurl'] = 'http://www.example.com/champly'
 # パンくずリスト
-param['breadcrumb'] = '<a href="#">Top</a> <i class="icon-angle-right"></i> <a href="./champler">Champler!</a>'
+param['breadcrumb'] = '<a href="#">Top</a> <i class="icon-angle-right"></i> <a href="./champly">Champly!</a>'
 # Googleアナリティクス
 param['ga'] = 'UA-XXXXXXXX-X'
 ################################
