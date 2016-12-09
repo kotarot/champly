@@ -2,28 +2,127 @@
  * champly.js
  */
 
-$('#input-number').change(function() {
-    var isError = true;
-
-    var n = $('#input-number').val();
-    if (n == '') {
-        $('#inputs-error-text').text('スクランブル数を入力してください。');
-    } else if (!n.match(/^[0-9]+$/) || n < 1 || 100 < n) {
-        $('#inputs-error-text').text('スクランブル数には、1以上100以下の数値を入力してください。');
-    } else {
-        isError = false;
-    }
-
+var showError = function(isError, inputId) {
     if (isError) {
         fadeInContainerNoWait('#inputs-error');
-        $('#input-number').addClass('invalid');
+        $(inputId).addClass('invalid');
         $('#button-champly').attr('disabled', true);
     } else {
         fadeOutContainer('#inputs-error');
-        $('#input-number').removeClass('invalid');
+        $(inputId).removeClass('invalid');
         $('#button-champly').attr('disabled', false);
     }
+};
+var showError2 = function(isError, inputId1, inputId2) {
+    if (isError) {
+        fadeInContainerNoWait('#inputs-error-2');
+        $(inputId1).addClass('invalid');
+        $(inputId2).addClass('invalid');
+        $('#button-champly').attr('disabled', true);
+    } else {
+        fadeOutContainer('#inputs-error-2');
+        $(inputId1).removeClass('invalid');
+        $(inputId2).removeClass('invalid');
+        $('#button-champly').attr('disabled', false);
+    }
+};
+
+$('#input-number').change(function() {
+    var isError = true;
+    var n = $('#input-number').val();
+    if (n == '') {
+        $('#inputs-error-text').text('スクランブル数を入力してください。');
+    } else if (!n.match(/^[0-9]+$/) || parseInt(n) < 1 || 20 < parseInt(n)) {
+        $('#inputs-error-text').text('スクランブル数には、1以上20以下の数値を入力してください。');
+    } else {
+        isError = false;
+    }
+    showError(isError, '#input-number');
 });
+
+$('#input-ef').change(function() {
+    var isError = true;
+    var v = $('#input-ef').val();
+    if (v == '') {
+        $('#inputs-error-text').text('揃っているエッジ数を入力してください。');
+    } else if (!v.match(/^[0-9]+$/) || parseInt(v) < 0 || 12 < parseInt(v)) {
+        $('#inputs-error-text').text('揃っているエッジ数には、0以上12以下の数値を入力してください。');
+    } else {
+        isError = false;
+    }
+    showError(isError, '#input-ef');
+    if (!isError) {
+        edgesCheck();
+    }
+});
+$('#input-eo').change(function() {
+    var isError = true;
+    var v = $('#input-eo').val();
+    if (v == '') {
+        $('#inputs-error-text').text('EO数を入力してください。');
+    } else if (!v.match(/^[0-9]+$/) || parseInt(v) < 0 || 12 < parseInt(v)) {
+        $('#inputs-error-text').text('EO数には、0以上12以下の数値を入力してください。');
+    } else {
+        isError = false;
+    }
+    showError(isError, '#input-eo');
+    if (!isError) {
+        edgesCheck();
+    }
+});
+$('#input-cf').change(function() {
+    var isError = true;
+    var v = $('#input-cf').val();
+    if (v == '') {
+        $('#inputs-error-text').text('揃っているコーナー数を入力してください。');
+    } else if (!v.match(/^[0-9]+$/) || parseInt(v) < 0 || 8 < parseInt(v)) {
+        $('#inputs-error-text').text('揃っているコーナー数には、0以上8以下の数値を入力してください。');
+    } else {
+        isError = false;
+    }
+    showError(isError, '#input-cf');
+    if (!isError) {
+        cornersCheck();
+    }
+});
+$('#input-co').change(function() {
+    var isError = true;
+    var v = $('#input-co').val();
+    if (v == '') {
+        $('#inputs-error-text').text('CO数を入力してください。');
+    } else if (!v.match(/^[0-9]+$/) || parseInt(v) < 0 || 8 < parseInt(v)) {
+        $('#inputs-error-text').text('CO数には、0以上8以下の数値を入力してください。');
+    } else {
+        isError = false;
+    }
+    showError(isError, '#input-co');
+    if (!isError) {
+        cornersCheck();
+    }
+});
+
+var edgesCheck = function() {
+    var isError = true;
+    var ef = $('#input-ef').val();
+    var eo = $('#input-eo').val();
+    if (12 < parseInt(ef) + parseInt(eo)) {
+        $('#inputs-error-2-text').text('揃っているエッジ数とEO数の和を12以下で入力してください。');
+    } else {
+        isError = false;
+    }
+    showError2(isError, '#input-ef', '#input-eo');
+};
+var cornersCheck = function() {
+    var isError = true;
+    var cf = $('#input-cf').val();
+    var co = $('#input-co').val();
+    if (8 < parseInt(cf) + parseInt(co)) {
+        $('#inputs-error-2-text').text('揃っているコーナー数とCO数の和を8以下で入力してください。');
+    } else {
+        isError = false;
+    }
+    showError2(isError, '#input-cf', '#input-co');
+};
 
 $(document).ready(function() {
     $('#inputs-form').submit(function(event) {

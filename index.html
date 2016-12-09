@@ -61,7 +61,7 @@
             </div>
             <div class="one third">
               <label for="select-type">スクランブル種類:</label>
-              <select id="select-type" class="unselected" name="p">
+              <select id="select-type" class="unselected" name="t">
                 <option value="0" selected="selected">完全ランダム</option>
                 <option value="1">エッジのみ</option>
                 <option value="2">コーナーのみ</option>
@@ -71,9 +71,9 @@
             <div class="one third"><span class="select-wrap" id="select-wrap-parity">
               <label for="select-parity">パリティ有無:</label>
               <select id="select-parity" class="unselected" name="p">
-                <option value="0" selected="selected">パリティランダム</option>
-                <option value="1">パリティ無し</option>
-                <option value="2">パリティ有り</option>
+                <option value="r" selected="selected">パリティランダム</option>
+                <option value="d">パリティ無し</option>
+                <option value="e">パリティ有り</option>
               </select>
             </span></div>
           </div>
@@ -120,6 +120,9 @@
         </fieldset>
         <div id="inputs-error" class="pad-top animated" style="display:none">
           <p id="inputs-error-text" class="error message"></p>
+        </div>
+        <div id="inputs-error-2" class="pad-top animated" style="display:none">
+          <p id="inputs-error-2-text" class="error message"></p>
         </div>
         <div class="double-padded">
           <button id="button-champly" type="submit" class="large block pink">Champly <i class="icon-heart"></i></button>
