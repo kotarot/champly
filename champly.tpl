@@ -72,7 +72,7 @@
           <p id="inputs-error-text" class="error message"></p>
         </div>
         <div class="double-padded">
-          <button id="button-champly" type="submit" class="large block asphalt">Champly!</buttom>
+          <button id="button-champly" type="submit" class="large block asphalt">Champly!</button>
         </div>
       </form>
     </div><!-- /.container -->
