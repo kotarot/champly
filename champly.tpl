@@ -9,7 +9,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
-    <title>Champly! 3x3x3 スクランブルジェネレータ for BLDer &hearts; {{ param.sitename }}</title>
+    <title>Champly! 3x3x3 スクランブルジェネレータ for blders &hearts; {{ param.sitename }}</title>
     <!-- Modernizr -->
     <script src="./js/libs/modernizr-2.6.2.min.js"></script>
     <!-- jQuery-->
@@ -23,7 +23,7 @@
     <link type="text/css" rel="stylesheet" href="./css/groundwork-ie.css"><![endif]-->
     <link type="text/css" rel="stylesheet" href="./champly.css">
     <meta property="og:locale" content="ja_JP">
-    <meta property="og:title" content="Champly! 3x3x3 スクランブルジェネレータ for BLDer">
+    <meta property="og:title" content="Champly! 3x3x3 スクランブルジェネレータ for blders">
     <meta property="og:site_name" content="{{ param.sitename }}">
     <meta property="og:description" content="ルービックキューブ (3x3x3) 目隠し練習用のスクランブルを生成します。">
     <meta property="og:type" content="article">
@@ -34,15 +34,17 @@
 
     <header class="container pad-top bounceInUp animated">
       <div class="padded">
-        <h1 class="zero">Champly!</h1>
-        <h2>&mdash; 3x3x3 スクランブルジェネレータ for BLDer &mdash;</h2>
+        <h1 class="zero">
+          <img src="./champly.png" width="28" height="28"> Champly!
+        </h1>
+        <h2>3x3x3 スクランブルジェネレータ for blders</h2>
         <p class="pad-top">
           ルービックキューブ (3x3x3) 目隠し練習用のスクランブルを生成します。
         </p>
       </div>
-      <div class="pad-left pad-right">
+      <!--<div class="pad-left pad-right">
         {{ param.breadcrumb }}
-      </div>
+      </div>-->
     </header>
 
     <hr>
@@ -50,29 +52,77 @@
     <div class="container pad-top bounceInRight animated">
       <form id="inputs-form" action="http://cube.terabo.net/apis/chample-for-champly.jsonp" method="GET">
         <fieldset>
-          <legend>Inputs</legend>
+          <legend>Options</legend>
           <div class="row">
-            <div class="one half pad-left pad-right">
+            <p class="option-label" style="margin-top: 0;">全体のオプション</p>
+            <div class="one third">
               <label for="input-number">スクランブル数:</label>
               <input id="input-number" type="text" name="n" value="5">
             </div>
-            <div class="one half pad-left pad-right"><span class="select-wrap">
+            <div class="one third">
               <label for="select-type">スクランブル種類:</label>
-              <select id="select-type" class="unselected" name="t">
-                <option value="0" selected="selected">通常</option>
-                <option value="1">コーナーのみ</option>
-                <option value="2">エッジのみ</option>
-                <option value="4">パリティ無し</option>
-                <option value="3">パリティ有り</option>
+              <select id="select-type" class="unselected" name="p">
+                <option value="0" selected="selected">完全ランダム</option>
+                <option value="1">エッジのみ</option>
+                <option value="2">コーナーのみ</option>
+                <option value="3">詳細に設定する</option>
+              </select>
+            </div>
+            <div class="one third"><span class="select-wrap" id="select-wrap-parity">
+              <label for="select-parity">パリティ有無:</label>
+              <select id="select-parity" class="unselected" name="p">
+                <option value="0" selected="selected">パリティランダム</option>
+                <option value="1">パリティ無し</option>
+                <option value="2">パリティ有り</option>
               </select>
             </span></div>
+          </div>
+          <div class="row">
+            <p class="option-label">エッジに関するオプション</p>
+            <div class="one third">
+              <label for="input-ef">揃っているエッジ数:</label>
+              <input id="input-ef" type="number" name="ef" value="0" min="0" max="12">
+            </div>
+            <div class="one third">
+              <label for="input-eo">EO数:</label>
+              <input id="input-eo" type="number" name="eo" value="0" min="0" max="12">
+            </div>
+            <div class="one third"></div>
+            <!--<div class="one fourth">
+              <label for="input-er">ループ数:</label>
+              <input id="input-er" type="number" name="er" value="1" min="1" max="6">
+            </div>
+            <div class="one fourth">
+              <label for="input-em">最大ループ長:</label>
+              <input id="input-em" type="number" name="em" value="2" min="2" max="12">
+            </div>-->
+          </div>
+          <div class="row">
+            <p class="option-label">コーナーに関するオプション</p>
+            <div class="one third">
+              <label for="input-cf">揃っているコーナー数:</label>
+              <input id="input-cf" type="number" name="cf" value="0" min="0" max="8">
+            </div>
+            <div class="one third">
+              <label for="input-co">CO数:</label>
+              <input id="input-co" type="number" name="co" value="0" min="0" max="8">
+            </div>
+            <div class="one third"></div>
+            <!--<div class="one fourth">
+              <label for="input-cr">ループ数:</label>
+              <input id="input-cr" type="number" name="cr" value="1">
+            </div>
+            <div class="one fourth">
+              <label for="input-cm">最大ループ長:</label>
+              <input id="input-cm" type="number" name="cm" value="0">
+            </div>-->
           </div>
         </fieldset>
         <div id="inputs-error" class="pad-top animated" style="display:none">
           <p id="inputs-error-text" class="error message"></p>
         </div>
         <div class="double-padded">
-          <button id="button-champly" type="submit" class="large block asphalt">Champly!</button>
+          <button id="button-champly" type="submit" class="large block pink">Champly <i class="icon-heart"></i></button>
         </div>
       </form>
     </div><!-- /.container -->

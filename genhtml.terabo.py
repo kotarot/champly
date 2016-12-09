@@ -13,7 +13,7 @@ param['sitename'] = 'terabo.net'
 # ベースURL
 param['baseurl'] = 'http://www.terabo.net/champly'
 # パンくずリスト
-param['breadcrumb'] = '<a href="/">Top</a> <i class="icon-angle-right"></i> <a href="./champly">Champly!</a>'
+param['breadcrumb'] = '<a href="/">Top</a> <i class="icon-angle-right"></i> <a href="./">Champly!</a>'
 # Googleアナリティクス
 param['ga'] = 'UA-56685700-1'
 ################################

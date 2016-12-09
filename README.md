@@ -11,8 +11,9 @@ If you would like to generate your own HTML, do the followings.
 Python (+Jinja2) need to be installed.
 Write settings in `genhtml.py` and then excute the script:
 ```
-python genhtml.py > champly.html
+python genhtml.py > index.html
 ```
+
 
 ## Demo
 

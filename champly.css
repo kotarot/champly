@@ -4,6 +4,9 @@
 body, h1, h2, h3, h4, h5, h6 {
     font-family: 'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック',arial,verdana,sans-serif;
 }
+h1 {
+    font-weight: bold;
+}
 h2 {
     font-size: 1.15em;
 }
@@ -20,13 +23,21 @@ legend {
 label {
     padding-top: 0;
     display: inline-block;
-    width: 10em;
+    width: 50%;
+    text-align: right;
 }
 input, select {
     display: inline-block;
     width: auto;
 }
-#input-number {
+p.option-label {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-weight: bold;
+}
+#input-number,
+#input-ef, #input-eo, #input-er, #input-em,
+#input-cf, #input-co, #input-cr, #input-cm {
     width: 6em;
 }
 #button-champly, #button-copy {
