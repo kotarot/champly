@@ -78,7 +78,7 @@
             </span></div>
           </div>
           <div class="row">
-            <p class="option-label" class="alt-options-label">エッジに関するオプション</p>
+            <p class="option-label alt-options-label">エッジに関するオプション</p>
             <div class="one third">
               <label for="input-ef" class="alt-options-label">揃っているエッジ数:</label>
               <input id="input-ef" type="number" name="ef" value="0" min="0" max="12">
@@ -98,7 +98,7 @@
             </div>-->
           </div>
           <div class="row">
-            <p class="option-label" class="alt-options-label">コーナーに関するオプション</p>
+            <p class="option-label alt-options-label">コーナーに関するオプション</p>
             <div class="one third">
               <label for="input-cf" class="alt-options-label">揃っているコーナー数:</label>
               <input id="input-cf" type="number" name="cf" value="0" min="0" max="8">
