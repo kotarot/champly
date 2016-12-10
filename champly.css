@@ -40,6 +40,9 @@ p.option-label {
 #input-cf, #input-co, #input-cr, #input-cm {
     width: 6em;
 }
+.label-disabled {
+    color: #aaa;
+}
 #button-champly, #button-copy {
     max-width: 480px;
     margin: auto;

@@ -124,7 +124,34 @@ var cornersCheck = function() {
     showError2(isError, '#input-cf', '#input-co');
 };
 
+var onSelectTypeChange = function() {
+    var t = $('#select-type option:selected').val();
+    if (t == 0 || t == 3) {
+        $('#select-parity-label').removeClass('label-disabled');
+        $('#select-parity').removeAttr('disabled');
+    } else {
+        $('#select-parity-label').addClass('label-disabled');
+        $('#select-parity').attr('disabled', 'disabled');
+    }
+    if (t == 3) {
+        $('.alt-options-label').removeClass('label-disabled');
+        $('#input-ef').removeAttr('disabled');
+        $('#input-eo').removeAttr('disabled');
+        $('#input-cf').removeAttr('disabled');
+        $('#input-co').removeAttr('disabled');
+    } else {
+        $('.alt-options-label').addClass('label-disabled');
+        $('#input-ef').attr('disabled', 'disabled');
+        $('#input-eo').attr('disabled', 'disabled');
+        $('#input-cf').attr('disabled', 'disabled');
+        $('#input-co').attr('disabled', 'disabled');
+    }
+};
+$('#select-type').change(onSelectTypeChange);
+
 $(document).ready(function() {
+    onSelectTypeChange();
+
     $('#inputs-form').submit(function(event) {
         // Submit キャンセル
         event.preventDefault();

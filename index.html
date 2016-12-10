@@ -57,7 +57,7 @@
             <p class="option-label" style="margin-top: 0;">全体のオプション</p>
             <div class="one third">
               <label for="input-number">スクランブル数:</label>
-              <input id="input-number" type="text" name="n" value="5">
+              <input id="input-number" type="number" name="n" value="5" min="1" max="20">
             </div>
             <div class="one third">
               <label for="select-type">スクランブル種類:</label>
@@ -65,26 +65,26 @@
                 <option value="0" selected="selected">完全ランダム</option>
                 <option value="1">エッジのみ</option>
                 <option value="2">コーナーのみ</option>
-                <option value="3">詳細に設定する</option>
+                <option value="3">パラメータを設定</option>
               </select>
             </div>
             <div class="one third"><span class="select-wrap" id="select-wrap-parity">
-              <label for="select-parity">パリティ有無:</label>
+              <label id="select-parity-label" for="select-parity">パリティ有無:</label>
               <select id="select-parity" class="unselected" name="p">
-                <option value="r" selected="selected">パリティランダム</option>
+                <option value="r" selected="selected">ランダムパリティ</option>
                 <option value="d">パリティ無し</option>
                 <option value="e">パリティ有り</option>
               </select>
             </span></div>
           </div>
           <div class="row">
-            <p class="option-label">エッジに関するオプション</p>
+            <p class="option-label" class="alt-options-label">エッジに関するオプション</p>
             <div class="one third">
-              <label for="input-ef">揃っているエッジ数:</label>
+              <label for="input-ef" class="alt-options-label">揃っているエッジ数:</label>
               <input id="input-ef" type="number" name="ef" value="0" min="0" max="12">
             </div>
             <div class="one third">
-              <label for="input-eo">EO数:</label>
+              <label for="input-eo" class="alt-options-label">EO数:</label>
               <input id="input-eo" type="number" name="eo" value="0" min="0" max="12">
             </div>
             <div class="one third"></div>
@@ -98,13 +98,13 @@
             </div>-->
           </div>
           <div class="row">
-            <p class="option-label">コーナーに関するオプション</p>
+            <p class="option-label" class="alt-options-label">コーナーに関するオプション</p>
             <div class="one third">
-              <label for="input-cf">揃っているコーナー数:</label>
+              <label for="input-cf" class="alt-options-label">揃っているコーナー数:</label>
               <input id="input-cf" type="number" name="cf" value="0" min="0" max="8">
             </div>
             <div class="one third">
-              <label for="input-co">CO数:</label>
+              <label for="input-co" class="alt-options-label">CO数:</label>
               <input id="input-co" type="number" name="co" value="0" min="0" max="8">
             </div>
             <div class="one third"></div>
