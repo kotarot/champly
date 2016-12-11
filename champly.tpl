@@ -40,6 +40,7 @@
         <h2>3x3x3 スクランブルジェネレータ for blders</h2>
         <p class="pad-top">
           ルービックキューブ (3x3x3) 目隠し練習用のスクランブルを生成します。
+          <a href="http://www.terabo.net/blog/champly-doc/" target="_blank">ドキュメント記事</a>
         </p>
       </div>
       <!--<div class="pad-left pad-right">
