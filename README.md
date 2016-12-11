@@ -1,6 +1,6 @@
 # Champly!
 
-Champer! is a web applicition providing Rubik's cube scrambles (3x3x3) for BLDer.
+Champy! is a web applicition providing Rubik's cube scrambles (3x3x3) for BLDers.
 This is a web interface of 3x3x3 scrambler/solver [chample](https://github.com/kotarot/chample).
 
 ## How to build HTML
@@ -17,7 +17,7 @@ python genhtml.py > index.html
 
 ## Demo
 
-* [http://www.example.net/champly/champly](http://www.example.net/champly/champly)
+* [http://www.terabo.net/champly/](http://www.terabo.net/champly/)
 
 Screenshot:
 ![Screenshot](screenshot.png)
