@@ -40,7 +40,7 @@
         <h2>3x3x3 スクランブルジェネレータ for blders</h2>
         <p class="pad-top">
           ルービックキューブ (3x3x3) 目隠し練習用のスクランブルを生成します。
-          <a href="http://www.terabo.net/blog/champly-doc/" target="_blank">ドキュメント記事</a>
+          <a href="https://www.terabo.net/blog/champly-doc/" target="_blank">ドキュメント記事</a>
         </p>
       </div>
       <!--<div class="pad-left pad-right">
@@ -51,7 +51,7 @@
     <hr>
 
     <div class="container pad-top bounceInRight animated">
-      <form id="inputs-form" action="http://cube.terabo.net/apis/chample-for-champly.jsonp" method="GET">
+      <form id="inputs-form" action="//www.terabo.net/apis/chample-for-champly.jsonp" method="GET">
         <fieldset>
           <legend>Options</legend>
           <div class="row">

@@ -11,7 +11,7 @@ param = {}
 # サイト名
 param['sitename'] = 'terabo.net'
 # ベースURL
-param['baseurl'] = 'http://www.terabo.net/champly'
+param['baseurl'] = 'https://www.terabo.net/champly'
 # パンくずリスト
 param['breadcrumb'] = '<a href="/">Top</a> <i class="icon-angle-right"></i> <a href="./">Champly!</a>'
 # Googleアナリティクス
